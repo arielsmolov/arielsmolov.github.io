@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-image:radial-gradient(blue,black);
+    text-align:center;
+  }
+  ul{
+    font-size: 100;
+    color: white;
+    text-align: center;
+    }
+  h2{color: white; 
+     text-align: center;
+    }
+  h1{
+    color:white; 
+    font-size: 200;
+    text-align: center;
+  }
+  img{
+    margin:auto;
+   display:block;
+  }
+  
+  ul{
+    list-style-position:inside;
+    text-align: center;
+  }
+  
+    
