@@ -1,57 +1,58 @@
-html {
-    height: 100%;
-    width: 100%;
-    background-image:radial-gradient(blue,black);
-    text-align:center;
-  }
-  ul{
-    font-size: 100;
-    color: white;
-    text-align: center;
-    }
-  h2{color: white; 
-     text-align: center;
-    }
-  h1{
-    color:white; 
-    font-size: 200;
-    text-align: center;
-  }
-  img{
-    margin:auto;
-   display:block;
-  }
-  
-  ul{
-    list-style-position:inside;
-    text-align: center;
-  }
-  /* Add this to your CSS */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* General Reset */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* Body Background */
+html {
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(blue, black);
+  text-align: center;
+}
+
+/* Common Styling for Headings */
 h1, h2 {
+  color: white;
+  text-align: center;
+}
+
+/* h1 Specific */
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
   animation: fadeIn 2s ease-in-out;
 }
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+
+/* h2 Specific */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6347;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease-in-out;
 }
 
-img {
-  animation: slideIn 1.5s ease-out;
+/* Paragraph */
+p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
-a:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+
+/* Image */
+img {
+  margin: auto;
+  display: block;
+  animation: slideIn 1.5s ease-out;
 }
 
 img:hover {
@@ -59,41 +60,8 @@ img:hover {
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
 
-button {
-  animation: bounce 2s infinite;
-}
-.scroll-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.scroll-in-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-document.addEventListener('scroll', function() {
-  const elements = document.querySelectorAll('.scroll-in');
-  elements.forEach((element) => {
-    const position = element.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-    if (position < screenHeight - 100) {
-      element.classList.add('scroll-in-visible');
-    }
-  });
-});
+/* Links and Buttons */
 a, button {
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
@@ -103,189 +71,40 @@ a:hover, button:hover {
   background-color: #fff;
   transform: translateY(-5px);
 }
-#contact {
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 600px;
-}
 
-#contact h2 {
-  margin-bottom: 20px;
-}
-
-#contact a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-/* General styling for the section */
-#contact {
-  background: linear-gradient(135deg, #3a3a3a, #111);
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  max-width: 600px;
-  margin: 40px auto;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Styling for the title */
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff6347;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Styling for the description text */
-#contact p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-/* Flexbox to align buttons */
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Styling for the buttons */
 .contact-btn {
   text-decoration: none;
   color: white;
   background: #ff6347;
   padding: 15px 25px;
-  border-radius:
-/* General Reset */
-body, h1, h2, p, ul {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Hero Section */
-#hero {
-  height: 100vh;
-  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero-content {
-  max-width: 700px;
-}
-
-#hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-#hero p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-.hero-btn {
-  text-decoration: none;
-  color: white;
-  background: #ff6347;
-  padding: 15px 30px;
   border-radius: 50px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.hero-btn:hover {
+.contact-btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-btn:hover {
   background: #e85342;
   transform: translateY(-5px);
 }
 
-/* Navigation Styling */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+.github-btn {
+  background: #333;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+.github-btn:hover {
+  background: #444;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ff6347;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 3rem;
-  }
-
-  #hero p {
-    font-size: 1.2rem;
-  }
-
-  .hero-btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-}
-/* General Reset */
-body, h1, h2, p, ul {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth;
-}
-
-/* Hero Section with Background Image */
+/* Hero Section */
 #hero {
   height: 100vh;
   background: url('your-background-image.jpg') no-repeat center center/cover;
@@ -302,38 +121,6 @@ body, h1, h2, p, ul {
   background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 10px;
-}
-
-#hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-}
-
-#hero p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
-
-.hero-btn {
-  text-decoration: none;
-  color: white;
-  background: #ff6347;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.hero-btn:hover {
-  background: #e85342;
-  transform: translateY(-5px);
 }
 
 /* Navigation Styling */
@@ -376,12 +163,6 @@ nav ul li a:hover {
   text-align: center;
 }
 
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 #about p {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -397,15 +178,9 @@ nav ul li a:hover {
   text-align: center;
 }
 
-#projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 /* Contact Section */
 #contact {
-  background-color: #3a3a3a;
+  background: linear-gradient(135deg, #3a3a3a, #111);
   color: white;
   padding: 50px 20px;
   text-align: center;
@@ -415,66 +190,52 @@ nav ul li a:hover {
   margin: 40px auto;
 }
 
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff6347;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 #contact p {
   font-size: 1.1rem;
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.contact-btn {
-  text-decoration: none;
-  color: white;
-  background: #ff6347;
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.contact-btn i {
-  margin-right: 10px;
-  font-size: 1.2rem;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
-.contact-btn:hover {
-  background: #e85342;
-  transform: translateY(-5px);
+button {
+  animation: bounce 2s infinite;
 }
 
-.github-btn {
-  background: #333;
-}
-
-.github-btn:hover {
-  background: #444;
-}
-
-/* Smooth Scroll Animation */
-.fade-in {
+.scroll-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in-visible {
+.scroll-in-visible {
   opacity: 1;
   transform: translateY(0);
 }
