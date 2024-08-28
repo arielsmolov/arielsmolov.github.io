@@ -6,104 +6,6 @@ body, h1, h2, p, ul {
   scroll-behavior: smooth;
 }
 
-/* Body Background */
-html {
-  height: 100%;
-  width: 100%;
-  background-image: radial-gradient(blue, black);
-  text-align: center;
-}
-
-/* Common Styling for Headings */
-h1, h2 {
-  color: white;
-  text-align: center;
-}
-
-/* h1 Specific */
-h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* h2 Specific */
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff6347;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Paragraph */
-p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
-
-/* Image */
-img {
-  margin: auto;
-  display: block;
-  animation: slideIn 1.5s ease-out;
-}
-
-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Links and Buttons */
-a, button {
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover, button:hover {
-  color: #ff6347;
-  background-color: #fff;
-  transform: translateY(-5px);
-}
-
-.contact-btn {
-  text-decoration: none;
-  color: white;
-  background: #ff6347;
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.contact-btn i {
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-
-.contact-btn:hover {
-  background: #e85342;
-  transform: translateY(-5px);
-}
-
-.github-btn {
-  background: #333;
-}
-
-.github-btn:hover {
-  background: #444;
-}
-
 /* Hero Section */
 #hero {
   height: 100vh;
@@ -121,6 +23,38 @@ a:hover, button:hover {
   background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 10px;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.hero-btn {
+  text-decoration: none;
+  color: white;
+  background: #ff6347;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn:hover {
+  background: #e85342;
+  transform: translateY(-5px);
 }
 
 /* Navigation Styling */
@@ -163,6 +97,12 @@ nav ul li a:hover {
   text-align: center;
 }
 
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 #about p {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -178,9 +118,15 @@ nav ul li a:hover {
   text-align: center;
 }
 
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 /* Contact Section */
 #contact {
-  background: linear-gradient(135deg, #3a3a3a, #111);
+  background-color: #3a3a3a;
   color: white;
   padding: 50px 20px;
   text-align: center;
@@ -190,52 +136,66 @@ nav ul li a:hover {
   margin: 40px auto;
 }
 
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6347;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 #contact p {
   font-size: 1.1rem;
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.contact-btn {
+  text-decoration: none;
+  color: white;
+  background: #ff6347;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
+.contact-btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
 
-button {
-  animation: bounce 2s infinite;
+.contact-btn:hover {
+  background: #e85342;
+  transform: translateY(-5px);
 }
 
-.scroll-in {
+.github-btn {
+  background: #333;
+}
+
+.github-btn:hover {
+  background: #444;
+}
+
+/* Smooth Scroll Animation */
+.fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.scroll-in-visible {
+.fade-in-visible {
   opacity: 1;
   transform: translateY(0);
 }
